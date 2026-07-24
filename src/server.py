@@ -1,8 +1,8 @@
-# -*- code=utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import flask
 
-# static_folder 静态资源目录 默认为static
+#static_folder 静态资源目录 默认为static
 app = flask.Flask(__name__) #设置服务器
 
 # get 方法
@@ -35,7 +35,7 @@ def test_reload():
 
 if __name__ == "__main__": 
     # gunicorn 代码修改
-    from werkzeug.contrib.fixers import ProxyFix
-    app.wsgi_app = ProxyFix(app.wsgi_app)
+    #from werkzeug.contrib.fixers import ProxyFix
+    #app.wsgi_app = ProxyFix(app.wsgi_app)
     app.run() #设置访问端口，调试模式等
 

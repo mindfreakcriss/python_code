@@ -46,3 +46,11 @@ sh server_start.sh
 ```
 pkill -f "gunicorn.*server:app"
 ```
+
+## 更新mac M4 环境安装出错
+```
+pip install llvmlite==0.44.0
+pip install numba==0.61.2
+pip install numpy==1.26.4
+pip install -r requirements.txt
+```

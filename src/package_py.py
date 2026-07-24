@@ -1,4 +1,5 @@
-# -*- code = utf-8 -*-
+# -*- coding: utf-8 -*-
+
 import math #数学模块
 import os #操作系统模块
 import sys#变量的访问

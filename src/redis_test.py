@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import redis
 
 #直连方式
