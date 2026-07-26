@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 
 import flask
+import config
 
 #static_folder 静态资源目录 默认为static
 app = flask.Flask(__name__) #设置服务器
+#引入配置文件
+app.config.from_pyfile('config.py')
 
 # get 方法
 @app.route('/test', methods=['GET']) #设置路由
@@ -32,6 +35,13 @@ def test_json():
 @app.route("/reload", methods=['GET'])
 def test_reload():
     return "no need to reload"
+
+@app.route("/config", methods=["GET"])
+def test_config():
+    result = {
+        'project_name' : config.PROJECT_NAME
+    }
+    return flask.jsonify(result)
 
 if __name__ == "__main__": 
     # gunicorn 代码修改
